@@ -18,8 +18,8 @@ go build -o release/windows/amd64/drone-runner-docker.exe
 
 # build and publish the docker image
 docker login -u $env:USERNAME -p $env:PASSWORD
-docker build -f docker/Dockerfile.windows.amd64.$env:VERSION -t drone/drone-runner-docker:windows-$env:VERSION-amd64 .
-docker push drone/drone-runner-docker:windows-$env:VERSION-amd64
+docker build -f docker/Dockerfile.windows.amd64.$env:VERSION -t luthermonson/drone-runner-docker:windows-$env:VERSION-amd64-v3 .
+# docker push drone/drone-runner-docker:windows-$env:VERSION-amd64
 
 # remove images from local cache
-docker rmi drone/drone-runner-docker:windows-$env:VERSION-amd64
+# docker rmi drone/drone-runner-docker:windows-$env:VERSION-amd64
